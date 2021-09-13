@@ -3,7 +3,7 @@ class Hotel:
 
     def __init__(self, name, price, stars) -> None:
         self.__id: int = Hotel.counter + 1
-        self.__name:str = name
+        self.__name: str = name
         self.__price: float = price
         self.__stars: float = stars
         Hotel.counter = self.__id
