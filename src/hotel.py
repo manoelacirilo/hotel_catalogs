@@ -5,7 +5,8 @@ class Hotel:
         self.__id: int = Hotel.counter + 1
         self.__name: str = name
         self.__price: float = price
-        self.__stars: float = stars
+        self.__stars: float = 0
+        self.set_stars(stars)
         Hotel.counter = self.__id
 
     def get_id(self) -> int:
@@ -30,6 +31,8 @@ class Hotel:
         return self.__stars
 
     def set_stars(self, new_stars) -> None:
+        if new_stars > 5:
+            new_stars = 5
         self.__stars = new_stars
 
     def show_data(self) -> str:
